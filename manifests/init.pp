@@ -1,4 +1,4 @@
-# Class: simplemnt
+# Define: simplemnt
 # ===========================
 #
 # Full description of class simplemnt here.
@@ -42,7 +42,7 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class simplemnt ( $server, $file_p, $dir = "/shared", $boot_up = "true", ) {
+define simplemnt ( $server, $file_p, $dir = "/shared", $boot_up = "true", ) {
 
   file { $dir:
     ensure =>'directory',
