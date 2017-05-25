@@ -42,7 +42,14 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class simplemnt ( $server, $file_p, $dir = "/shared", $boot_up = "true", ) {
+class simplemnt (
+  $server,
+  $file_p = '0755',
+  $dir = '/shared',
+  $boot_up = 'true',
+  $fstype = 'nfs',
+  $options = 'defaults'
+) {
 
   file { $dir:
     ensure =>'directory',
@@ -50,10 +57,10 @@ class simplemnt ( $server, $file_p, $dir = "/shared", $boot_up = "true", ) {
   }
 
   mount { $dir:
-    device => $server,
-    fstype => 'nfs',
     ensure => 'mounted',
-    options => 'defaults',
+    device => $server,
+    fstype => $fstype,
+    options => $options,
     atboot => $boot_up,
     require => File[$dir]
   }
