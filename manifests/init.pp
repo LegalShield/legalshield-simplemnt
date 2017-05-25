@@ -1,4 +1,4 @@
-# Class: simplemnt
+# Define: simplemnt
 # ===========================
 #
 # Full description of class simplemnt here.
