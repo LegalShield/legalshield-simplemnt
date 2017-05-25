@@ -42,7 +42,7 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class simplemnt (
+define simplemnt (
   $server,
   $file_p = '0755',
   $dir = '/shared',
