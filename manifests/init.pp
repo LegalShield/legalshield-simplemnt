@@ -48,8 +48,8 @@ define simplemnt (
   $dir = '/shared',
   $boot_up = 'true',
   $fstype = 'nfs',
-  $options = 'defaults'
-  $owner = 'root'
+  $options = 'defaults',
+  $owner = 'root',
   $group = 'root'
 ) {
 
