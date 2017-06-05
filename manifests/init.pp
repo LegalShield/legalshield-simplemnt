@@ -49,11 +49,15 @@ define simplemnt (
   $boot_up = 'true',
   $fstype = 'nfs',
   $options = 'defaults'
+  $owner = 'root'
+  $group = 'root'
 ) {
 
   file { $dir:
-    ensure =>'directory',
-    mode => $file_p
+    ensure => 'directory',
+    mode   => $file_p,
+    owner  => $owner,
+    group  => $group
   }
 
   mount { $dir:
